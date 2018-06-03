@@ -635,6 +635,15 @@ html *::-webkit-scrollbar-thumb {
     font-size: .7rem;
     line-height: 1.2rem;
 }
+.onpost-categories{
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-size: .7rem;
+  line-height: 1.2rem;
+  background-color: grey;
+}
 
 .post-tags-list-item,
 .post-categories-list-item {

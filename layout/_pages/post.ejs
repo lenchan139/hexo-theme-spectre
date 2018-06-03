@@ -11,39 +11,40 @@
             </div>
             <div class="divider"></div>
             <div>
-                <!-- Category -->
-                <% if (page.categories && page.categories.length) { %>
-                    <%- list_categories(page.categories, {
-                        show_count: false,
-                        class: 'post-categories',
-                        style: 'list',
-                        separator: ''
-                    }) %>
-                <% } %>
-                <!-- Post Tags -->
-                <% if (page.tags && page.tags.length) { %>
-                    <%- list_tags(page.tags, {
-                        show_count: false,
-                        class: 'post-tags',
-                        style: 'list',
-                        separator: ''
-                    }) %>
-                <% } %>
+
             </div>
+        </div>
+        <div class="post-footer-info bg-gray">
+            <%- partial('_partial/post/header-info') %>
         </div>
         <br>
         <div id="post-content" class="card-body">
             <%- page.content %>
             <%- partial('_partial/post-license') %>
         </div>
+
+
         <div class="post-footer-info bg-gray">
-            <%- partial('_partial/post/footer-info') %>
+
+          <!-- Post Tags -->
+          <% if (page.tags && page.tags.length) { %>
+              <%- list_tags(page.tags, {
+                  show_count: false,
+                  class: 'post-tags',
+                  style: 'list',
+                  separator: '#'
+              }) %>
+          <% } %>
+            <%#- partial('_partial/post/footer-info') %>
+
         </div>
         <div class="divider m-0"></div>
         <%- partial('_partial/post/nav') %>
         <% if(theme.comment.use){ %>
             <div class="card-footer">
+
                 <%- partial('_plugin/comment/' + theme.comment.use + '/main') %>
+
             </div>
         <% } %>
     </div>
