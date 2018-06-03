@@ -1,5 +1,5 @@
 <% if(post.thumbnail) { %>
-    <div class="card with-thumbnail">
+    <div class="card with-thumbnail" >
         <a href="<%= url_for(post.path) %>" class="card-image lazy" data-src="<%= post.thumbnail %>"></a>
 <% } else { %>
     <div class="card no-thumbnail">
@@ -29,6 +29,7 @@
                 style: 'none',
                 separator: ' > '
             }) %>
+
         <% } %>
       </div>
     </div>
